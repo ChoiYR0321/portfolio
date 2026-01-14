@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>project 3</title>
+
+
+    <link href="show.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
+
+    <!-- 기본 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div class="show-page">
+
+        <h2>비건 입문자를 위한 LMS 플랫폼</h2>
+        <p>2025.09.03 ~ 10.14 (팀 프로젝트)</p>
+        <hr>
+
+        <div class="slide-container">
+            <button class="nav-btn prev-btn">&lt;</button>
+
+            <div class="slides">
+                <div class="slide-item active">
+                    <div class="arch-area">
+                        <img src="/images03/arch01.png">
+                    </div>
+                </div>
+
+
+                <div class="slide-item active">
+                    <div class="image-area">
+                        <img src="/images03/img05.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 1. 로그인 전 메인화면</p>
+                        <p> 1-1. 로그인 후 메인 화면</p>
+                        <ul>
+                            <li>상단 헤더 메뉴바 생성</li>
+                            <li>베너 슬라이드 강의 바로가기 버튼 생성</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <img src="/images03/img06.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 2. 회원가입</p>
+                        <p> 3. 로그인</p>
+                    </div>
+                </div>
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <img src="/images03/img07.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 4. 강의 리스트</p>
+                        <ul>
+                            <li>강의명 검색, 강의 카테고리 분류 필터 기능</li>
+                            <li>강의 카드 : 카테고리, 진도율, 재생 버튼, 퀴즈 풀기 버튼, 추천 기능</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <img src="/images03/img08.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 5. 강의 재생 모달</p>
+                        <ul>
+                            <li>강의 제목, 강의 영상, 강의 설명, 수강 완료 버튼</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <img src="/images03/img08-1.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 5-1. 퀴즈 화면</p>
+                        <ul>
+                            <li>주관식 단답형</li>
+                        </ul>
+                        <p> 5-2. 퀴즈 결과 화면</p>
+                        <ul>
+                            <li>
+                                정답 개수 표시
+                            </li>
+                            <li>
+                                오답 문제 정리
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <img src="/images03/img09.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 6. 나의 냉장고 초기 화면</p>
+                        <ul>
+                            <li>
+                                오른쪽 화면: 검색 기능, 재료 카테고리 태그
+                            </li>
+                            <li>
+                                왼쪽 화면: 레시피 찾기 버튼
+                            </li>
+                            <li>
+                                재료 태그를 클릭하거나 검색 후 레시피 찾기 버튼 클릭
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <img src="/images03/img10.png">
+                    </div>
+                    <div class="description-area">
+                        <p>7. 나의 냉장고 레시피 카드 생성</p>
+                        <ul>
+                            <li>레시피 카드: 맘에드는 레시피 저장 버튼으로 저장 가능</li>
+                            <li>저장 된 레시피는 "마이페이지 -> 나의 레시피"에서 확인 가능</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <img src="/images03/img11.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 8. 나의 냉장고 레시피 카드 생성</p>
+                        <ul>
+                            <li>비건 재료 외의 재료 선택 시 문구와 함께 해당 재료를 제외한 레시피 추천</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <img src="/images03/img12.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 9. 게시판 화면</p>
+                        <ul>
+                            <li>
+                                카테고리 분류, 검색 기능
+                            </li>
+                            <li>
+                                글쓰기 버튼
+                            </li>
+                            <li>
+                                고정 게시물 표시
+                            </li>
+                            <li>
+                                분류 / 제목 / 작성자 / 작성일
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <img src="/images03/img13.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 10. 게시물 상세</p>
+                        <ul>
+                            <li>
+                                게시물 목록 버튼
+                            </li>
+                            <li>
+                                게시물 내용
+                            </li>
+                            <li>
+                                본인 게시물은 수정 / 삭제 가능
+                            </li>
+                            <li>
+                                댓글창
+                            </li>
+                            <li>
+                                이전글 / 다음글 버튼 기능
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <img src="/images03/img14.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 11. 게시물 상세 (공지 사항)</p>
+                        <ul>
+                            <li>
+                                댓글 기능
+                            </li>
+                            <li>
+                                본인 댓글 삭제 가능
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <img src="/images03/img15.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 12. 마이페이지 (대시보드)</p>
+                        <ul> 
+                            <li>
+                                카테고별 학습 진도율 표시
+                            </li>
+                            <li>
+                                나의 레시피 표시
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <img src="/images03/img27.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 13. 나의 학습기록</p>
+                        <ul>
+                            <li>
+                                카테고리별 학습지도 확인
+                            </li>
+                            <li>
+                                최근 본 강의 / 완료한 강의 확인
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <img src="/images03/img16.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 14. 나의 레시피</p>
+                        <ul>
+                            <li>
+                                레시피 검색 기능
+                            </li>
+                            <li>
+                                저장 된 레시피 카드
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <img src="/images03/img17.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 15. 나의 레시피 상세</p>
+                        <ul>
+                            <li>
+                                레시피 카드 클릭 시 이동
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <img src="/images03/img18.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 16. 내 게시물 관리</p>
+                        <ul>
+                            <li>
+                                내가 작성한 게시물 수정 / 삭제 가능
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <img src="/images03/img19.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 17. 게시글 수정</p>
+                        <ul>
+                            <li>
+                                내가 쓴 게시물 수정 가능
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <img src="/images03/img20.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 18. 회원정보 수정</p>
+                    </div>
+                </div>
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <img src="/images03/img21.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 19. 강사 - 나의 강의 관리 화면</p>
+                        <ul>
+                            <li>
+                                강사가 등록한 강의 리스트 
+                            </li>
+                            <li>
+                                강의 수정 / 퀴즈 수정 / 강의 삭제 기능
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <img src="/images03/img28.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 20. 강사 - 강의 등록</p>
+                        <ul>
+                            <li>
+                                강의 카테고리 선택
+                            </li>
+                            <li>
+                                영상 / 이미지 업로드
+                            </li>
+                            <li>
+                                강의 내용 입력
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <img src="/images03/img22.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 21. 강사 - 퀴즈 츨제</p>
+                        <ul>
+                        <li>
+                            퀴즈 내용 입력
+                        </li>
+                        <li>
+                            문항 추가 / 삭제 기능 (최대 5문항)
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <img src="/images03/img23.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 22. 강사 - 강의 수정</p>
+                    </div>
+                </div>
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <img src="/images03/img24.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 23. 강사 - 퀴즈 수정</p>
+                    </div>
+                </div>
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <img src="/images03/img25.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 24. 관리자 - 게시판 관리</p>
+                        <ul>
+                            <li>
+                                게시물 수정 / 삭제 기능
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <img src="/images03/img26.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 25. 관리자 - 회원 정보 관리</p>
+                        <ul>
+                            <li>
+                                회원 정보 수정 / 삭제 기능
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+
+            <button class="nav-btn next-btn">&gt;</button>
+        </div>
+
+    </div>
+
+</body>
+<script src="../script.js"></script>
+
+</html>

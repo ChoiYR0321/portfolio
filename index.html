@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choi Ye Rim Portfolio</title>
+
+    <!-- 기본 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap"
+        rel="stylesheet" />
+
+    <link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">PORTFOLIO</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#archiving">Archiving</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+    <section class="hero">
+        <h1>Creative Developer</h1>
+
+        <div class="hero-projects">
+            <button class="hero-item" data-target="#project-vending">
+                <img src="images01/vm.png" alt="음료 자판기">
+                <span class="tooltip">음료 자판기 시뮬레이터</span>
+            </button>
+
+            <button class="hero-item offset-1" data-target="#project-music">
+                <img src="images01/play.png" alt="음악 플레이리스트">
+                <span class="tooltip">음악 플레이리스트</span>
+            </button>
+
+            <button class="hero-item offset-2" data-target="#project-vegan">
+                <img src="images01/veganlms.png" alt="비건 LMS">
+                <span class="tooltip">비건 LMS 플랫폼</span>
+            </button>
+
+            <button class="hero-item offset-3" data-target="#project-firstaid">
+                <img src="images01/firstaidlms.png" alt="응급처치 LMS">
+                <span class="tooltip">응급처치 LMS 플랫폼</span>
+            </button>
+        </div>
+    </section>
+    </section>
+
+
+    <section class="section" id="about">
+        <h2>About</h2>
+
+        <div class="about-wrapper">
+            <div class="about-top">
+                <div class="about-card-wrap">
+                    <div class="about-card">
+                        <!-- 앞면 -->
+                        <div class="about-card-face front">
+                            <div class="card-photo">
+                                <img src="images01/profile.jpg" alt="profile" />
+                            </div>
+
+                            <div class="card-main">
+                                <h3 class="card-name">최예림</h3>
+                                <p class="card-role">Front-End Developer</p>
+
+                                <div class="card-history">
+                                    - DW아카데미 메타버스 9회차 과정 수료 (2025.05 ~ 12)<br>
+                                    - 건양대학교 제약생명공학과 졸업 (2020 ~ 2024)
+                                </div>
+
+                                <div class="card-meta">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" style="margin-right: 4px; vertical-align: middle;">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    <span>Daejeon, South Korea</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 뒷면 -->
+                        <div class="about-card-face back">
+                            <ul class="card-info">
+                                <li><span class="tag"># 사용자 경험 중심</span></li>
+                                <li><span class="tag"># 인터랙션 설계</span></li>
+                                <li><span class="tag"># 구조화된 사고</span></li>
+                                <li><span class="tag"># 협업 지향</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="about-desc">
+                <p>
+                    사용자 경험을 중심으로 사고하고, 소통을 통해 해답을 만들어가는 신입 웹 개발자 최예림입니다.
+                    <br>아이디어를 구조화해 화면과 인터랙션으로 풀어내는 과정에 강점을 가지고 있습니다.
+                </p>
+                <p>
+                    프론트엔드 개발은 화면 구현을 넘어 사용자의 흐름을 설계하고 팀의 의도를 연결하는 일이라 생각합니다.
+                </p>
+                <p>
+                    창의적인 관점과 열린 소통을 바탕으로, 즉시 현업에 기여할 수 있는 준비된 개발자로 함께하겠습니다.
+                </p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="section" id="skills">
+        <h2>Skills</h2>
+
+        <div class="skill-tabs">
+            <button class="skill-tab active" data-target="tab-front">Front-End</button>
+            <button class="skill-tab" data-target="tab-back">Back-End & DB</button>
+            <button class="skill-tab" data-target="tab-tools">Tools</button>
+        </div>
+
+        <!-- 🔹 탭별 내용 영역 -->
+        <div class="skill-contents">
+
+            <div class="skill-content active" id="tab-front">
+                <div class="skill-flex">
+                    <div class="skill-card">
+                        <div class="icon-box html-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 5l2 15 8 4 8-4 2-15-10-3z" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12 18V6" opacity="0.5" />
+                            </svg>
+                        </div>
+                        <div class="skill-info">
+                            <h3>HTML5</h3>
+                            <p>Semantic Markups</p>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="icon-box css-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 5l2 15 8 4 8-4 2-15-10-3z" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M8 12h8" opacity="0.8" />
+                            </svg>
+                        </div>
+                        <div class="skill-info">
+                            <h3>CSS3</h3>
+                            <p>Flex & Grid, Animations</p>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="icon-box js-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16v16H4z" />
+                                <path d="M16 16v-4" />
+                                <path d="M12 16v-6" />
+                            </svg>
+                        </div>
+                        <div class="skill-info">
+                            <h3>JavaScript</h3>
+                            <p>ES6+, DOM Manipulation</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="icon-box react-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3" />
+                                <path
+                                    d="M12 21.35c-4.5 0-8.15-4.18-8.15-9.35S7.5 2.65 12 2.65 20.15 6.82 20.15 12 16.5 21.35 12 21.35z"
+                                    opacity="0.5" />
+                            </svg>
+                        </div>
+                        <div class="skill-info">
+                            <h3>Responsive web</h3>
+                            <p>PC First Design</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="icon-box ui-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" />
+                                <path d="M3 9h18" />
+                            </svg>
+                        </div>
+                        <div class="skill-info">
+                            <h3>UI/UX</h3>
+                            <p>Interactive Web Layouts</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="skill-content" id="tab-back">
+                <div class="skill-flex">
+                    <div class="skill-card">
+                        <div class="icon-box java-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 20c4.4 0 8-3.6 8-8s-3.6-8-8-8-8 3.6-8 8 3.6 8 8 8z" />
+                                <path d="M12 8v8" />
+                                <path d="M8 12h8" />
+                            </svg>
+                        </div>
+                        <div class="skill-info">
+                            <h3>Java</h3>
+                            <p>OOP</p>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="icon-box spring-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                            </svg>
+                        </div>
+                        <div class="skill-info">
+                            <h3>Spring Boot</h3>
+                            <p>REST API, JPA</p>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="icon-box db-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                            </svg>
+                        </div>
+                        <div class="skill-info">
+                            <h3>MySQL</h3>
+                            <p>RDBMS Design, Query</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-content" id="tab-tools">
+                <div class="skill-flex">
+
+                    <div class="skill-card">
+                        <div class="icon-box vscode-icon" style="color: #176ab3;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <div class="skill-info">
+                            <h3>VS Code</h3>
+                            <p>Code Editor</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="icon-box intellij-icon" style="color: #3b2e05;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                                <line x1="6" y1="1" x2="6" y2="4"></line>
+                                <line x1="10" y1="1" x2="10" y2="4"></line>
+                                <line x1="14" y1="1" x2="14" y2="4"></line>
+                            </svg>
+                        </div>
+                        <div class="skill-info">
+                            <h3>IntelliJ IDEA</h3>
+                            <p>Java IDE</p>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="icon-box heidi-icon" style="color: #328c38;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 3h18v18H3z" />
+                                <path d="M3 9h18" />
+                                <path d="M3 15h18" />
+                                <path d="M9 3v18" />
+                            </svg>
+                        </div>
+                        <div class="skill-info">
+                            <h3>HeidiSQL</h3>
+                            <p>DB Client, Query Tool</p>
+                        </div>
+                    </div>
+
+
+                    <div class="skill-card">
+                        <div class="icon-box git-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="18" r="3" />
+                                <circle cx="6" cy="6" r="3" />
+                                <circle cx="18" cy="6" r="3" />
+                                <path d="M6 9v3a3 3 0 003 3h6" />
+                                <path d="M18 9v1a2 2 0 01-2 2h-1" />
+                            </svg>
+                        </div>
+                        <div class="skill-info">
+                            <h3>Git & GitHub</h3>
+                            <p>Version Control, Collab</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+    <section class="section" id="projects">
+        <h2>Projects</h2>
+
+        <div class="project-grid">
+
+            <!-- 1. 음료 자판기 -->
+            <div class="project-card" id="project-vending">
+                <div class="project-header">
+                    <span class="tag">HTML · CSS · JS</span>
+                    <h3>음료 자판기 시뮬레이터</h3>
+                    <p class="period">2025.06.26 ~ 07.25 (개인 프로젝트)</p>
+                </div>
+
+                <ul class="description">
+                    <li>HTML/CSS/JS만을 사용한 인터랙티브 자판기 UI 구현</li>
+                    <li>동전 드래그 & 투입 애니메이션</li>
+                    <li>음료 이미지 전환</li>
+                    <li>재고 관리 및 관리자 모드 기능</li>
+                </ul>
+
+                <div class="stack-box">
+                    #자판기시뮬레이션  &nbsp; #인터랙션UI  &nbsp; #DOM조작  &nbsp; #관리자모드
+                </div>
+                <div class="button-row">
+                    <button class="readme-btn" data-file="readme/readme01.html">📄 README</button>
+                    <button class="show-btn" data-file="show/show01.html">▶️ SHOW</button>
+                </div>
+            </div>
+
+            <!-- 2. 자바 플레이리스트 -->
+            <div class="project-card" id="project-music">
+                <div class="project-header">
+                    <span class="tag yellow">Java · Java Swing · JLayer </span>
+                    <h3>음악 플레이 리스트</h3>
+                    <p class="period">2024.08.08 ~ 08.27 (개인 프로젝트)</p>
+                </div>
+
+                <ul class="description">
+                    <li>자바로 구현한 콘솔 기반 플레이 리스트 프로그램</li>
+                    <li>음악 재생 & 일시정지 기능</li>
+                    <li>스레드를 이용한 비동기 음악 재생 처리 (UI 멈춤 방지)</li>
+                    <li>즐겨찾기(좋아요) 기반 선호 음악 관리</li>
+                </ul>
+
+                <div class="stack-box">
+                   #음악플레이어 &nbsp; #JavaGUI &nbsp; #멀티스레드 &nbsp; #비동기처리
+                </div>
+
+                <div class="button-row">
+                    <button class="readme-btn" data-file="readme/readme02.html">📄 README</button>
+                    <button class="show-btn" data-file="show/show02.html">▶️ SHOW</button>
+                </div>
+            </div>
+
+            <!-- 3. 비건 LMS -->
+            <div class="project-card" id="project-vegan">
+                <div class="project-header">
+                    <span class="tag green">JAVA · Spring Boot · MySQL</span>
+                    <h3>비건 입문자를 위한 LMS 교육 플랫폼</h3>
+                    <p class="period">2025.09.03 ~ 10.14 (팀 프로젝트)</p>
+                </div>
+
+                <ul class="description">
+                    <li>Spring Boot 기반 LMS 웹 서비스 구현</li>
+                    <li>전반적인 UI/UX 기획 및 디자인, 화면 구성, 인터랙션 구현 담당</li>
+                    <li>HTML, CSS, JavaScript로 프론트 UI 구축</li>
+                    <li>OpenAI API를 활용한 레시피 추천 결과 화면 구성</li>
+                </ul>
+
+                <div class="stack-box">
+                    #비건LMS &nbsp; #컴포넌트재사용 &nbsp; #상태기반UI &nbsp; #협업경험 
+                </div>
+                <div class="button-row">
+                    <button class="readme-btn" data-file="readme/readme03.html">📄 README</button>
+                    <button class="show-btn" data-file="show/show03.html">▶️ SHOW</button>
+                </div>
+            </div>
+
+
+            <!-- 4. 응급처치 LMS -->
+            <div class="project-card" id="project-firstaid">
+                <div class="project-header">
+                    <span class="tag purple">JAVA · Spring Boot · MySQL</span>
+                    <h3>응급처치 LMS 교육 플랫폼</h3>
+                    <p class="period">2025.11.03 ~ 12.01 (팀 프로젝트)</p>
+                </div>
+
+                <ul class="description">
+                    <li>Spring Boot 기반 LMS 웹 서비스 구현</li>
+                    <li>User 화면 UI/UX 기획 및 디자인, 화면 구성, 인터랙션 구현 담당</li>
+                    <li>HTML, CSS, JavaScript 프론트 UI 구축</li>
+                    <li>전체적으로 학습 목적과 흐름을 직관적으로 전달하는 화면 UI 설계</li>
+                </ul>
+
+                <div class="stack-box">
+                    #응급처치LMS &nbsp;  #학습흐름제어  &nbsp; #상태유지UI  &nbsp; #시뮬레이션융합
+                </div>
+                <div class="button-row">
+                    <button class="readme-btn" data-file="readme/readme04.html">📄 README</button>
+                    <button class="show-btn" data-file="show/show04.html">▶️ SHOW</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- === README 모달 === -->
+    <div id="modalOverlay" class="modal-overlay">
+        <div class="modal">
+            <button class="close-modal">✕</button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- === SHOW 모달 === -->
+    <div id="modalShowOverlay" class="modal-show-overlay">
+        <div class="modal-show">
+            <button class="close-show">✕</button>
+            <div id="modalShowContent"></div>
+        </div>
+    </div>
+
+    <section class="section arch-contact">
+
+        <div class="arch-contact-grid">
+
+            <!-- Archiving -->
+            <div class="arch-column">
+                <h2 class="section-title" id="archiving">Archiving</h2>
+
+                <div class="project-card arch-card">
+                    <a href="https://github.com/ChoiYR0321/projects/tree/projects" target="_blank" class="arch-item">
+                        <div class="arch-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.31 6.84 9.66
+                                .5.1.68-.22.68-.48 0-.24-.01-.87-.01-1.7
+                                -2.78.62-3.37-1.38-3.37-1.38
+                                -.45-1.17-1.11-1.48-1.11-1.48
+                                -.9-.64.07-.63.07-.63
+                                1 .07 1.53 1.05 1.53 1.05
+                                .89 1.56 2.34 1.11 2.91.85
+                                .09-.66.35-1.11.63-1.36
+                                -2.22-.26-4.56-1.14-4.56-5.06
+                                0-1.12.39-2.03 1.03-2.74
+                                -.1-.26-.45-1.3.1-2.71
+                                0 0 .84-.27 2.75 1.05
+                                .8-.23 1.66-.35 2.51-.35
+                                .85 0 1.71.12 2.51.35
+                                1.91-1.32 2.75-1.05 2.75-1.05
+                                .55 1.41.2 2.45.1 2.71
+                                .64.71 1.03 1.62 1.03 2.74
+                                0 3.93-2.34 4.79-4.57 5.05z" />
+                            </svg>
+                        </div>
+
+                        <div class="arch-text">
+                            <p class="arch-name">GitHub</p>
+                            <span>github.com/ChoiYR0321</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="arch-column">
+                <h2 class="section-title" id="archiving">Contact</h2>
+
+                <div class="project-card arch-card">
+                    <div class="arch-item">
+                        <div class="arch-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M2 6.5C2 5.12 3.12 4 4.5 4h15
+               C20.88 4 22 5.12 22 6.5v11
+               c0 1.38-1.12 2.5-2.5 2.5h-15
+               C3.12 20 2 18.88 2 17.5v-11zM4.5 6
+               a.5.5 0 0 0-.5.5v.28l8 4.8
+               8-4.8V6.5a.5.5 0 0 0-.5-.5h-15z
+               m15 12a.5.5 0 0 0 .5-.5V8.1l-7.26
+               4.36a1.5 1.5 0 0 1-1.48 0L4
+               8.1v9.4a.5.5 0 0 0 .5.5h15z" />
+                            </svg>
+                        </div>
+
+                        <div class="arch-text">
+                            <p class="arch-name">E-mail</p>
+                            <span>choiyerim0321@gamil.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    </div>
+    </section>
+
+    <footer>
+        © Choi Ye Rim Portfolio
+    </footer>
+</body>
+
+</html>
+<script src="script.js"></script>

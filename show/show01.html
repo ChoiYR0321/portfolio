@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>project 1</title>
+
+
+    <link href="show.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
+
+    <!-- 기본 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div class="show-page">
+
+        <h2>음료 자판기 시뮬레이터</h2>
+        <p>2025.06.26 ~ 07.25 (개인 프로젝트)</p>
+        <hr>
+
+        <div class="slide-container">
+            <button class="nav-btn prev-btn">&lt;</button>
+
+            <div class="slides">
+                <div class="slide-item active">
+                    <div class="image-area">
+                        <img src="/images01/img01.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 1. 음료 자판기 전체 모습</p>
+                        <p> 2. sold out 시 음료 이미지 전환</p>
+                        <p> 3. 투입금 입력</p>
+                        <p> 4. 남은 동전 반환 </p>
+                        <p> 5. 구매 목록 현황</p>
+                    </div>
+                </div>
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <video controls muted autoplay playsinline>
+                            <source src="/images01/video01.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="description-area">
+                        <p>6. 동전 드래그 & 드롭<p>
+                    </div>
+                </div>
+
+                <div class="slide-item">
+                    <div class="image-area">
+                        <img src="/images01/img02.png">
+                    </div>
+                    <div class="description-area">
+                        <p> 7. 음료 자판기 관리자 모드</p>
+                        <p> 8. 비밀번호 입력창</p>
+                        <p> 9. 음료 재고 / 가격 / 총 수입 관리</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="nav-btn next-btn">&gt;</button>
+        </div>
+
+    </div>
+
+</body>
+<script src="../script.js"></script>
+
+</html>

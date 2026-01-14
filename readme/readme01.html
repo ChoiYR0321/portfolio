@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>project 01</title>
+
+    <!-- 기본 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap"
+        rel="stylesheet" />
+ <link href="readme.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
+   
+
+</head>
+
+<body>
+    <div class="readme-page">
+        <h2>음료 자판기 시뮬레이터</h2>
+        <p>2025.06.26 ~ 07.25 (개인 프로젝트)</p>
+        <hr>
+
+        <h3>📌 요약</h3>
+        <ul>
+            <li>HTML, CSS, JS만을 사용한 자판기 인터랙션 UI</li>
+            <li>동전 드래그 & 투입 애니메이션</li>
+            <li>재고 감소 / 음료 이미지 변환 / 구매 목록 확인</li>
+            <li>관리자 모드 (비밀번호 기반 재고, 가격, 수입 관리)</li>
+        </ul>
+
+        <h3>🧠 기술적 포인트</h3>
+        <ul>
+            <li>드래그 이벤트 + 투입 애니메이션</li>
+            <li>음료 재고가 0일 시 품절 이미지 변경 + 버튼 비활성화</li>
+            <li>구매 목록 자동 누적</li>
+            <li>관리자 모드 버튼 클릭 → 비밀번호 입력</li>
+            <li>관리자 모드 재고 / 가격 변경, 수익 확인</li>
+        </ul>
+
+
+
+
+        <h3>🔍 고찰</h3>
+        
+        <p>
+            JavaScript의 동작 원리와 상태 관리 흐름을 직접 구현해보기 위한 음료 자판기 시뮬레이터입니다.
+            금액 투입, 음료 선택, 재고 감소, 잔돈 반환 등 실제 자판기의 구조를 그대로 로직으로 풀어내는 과정에서
+            DOM 조작과 이벤트 흐름을 더 명확하게 이해할 수 있었습니다.
+        </p>
+        <p>
+            또한 관리자 모드를 추가하여 재고 충전, 가격 변경, 매출 확인 등 실제 서비스에서 필요한
+            개념을 구현해볼 수 있었고, 데이터 구조를 학습 능력늘 향상 시킬 수 있었습니다.
+        </p>
+        <p>
+            UI도 직접 CSS로 구성하고, 다양한 오류 처리 및 사용자 피드백을 넣으며
+            실제 서비스가 갖춰야 할 상호작용 방식을 고민할 수 있었습니다.
+        </p>
+
+        <h3>🛠 기술 스택</h3>
+        <p>HTML, CSS, JavaScript</p>
+
+        <h3>⚙️ 설치 & 이용법</h3>
+        <p>vccode 설치 후 index.html 파일 실행</p>
+
+    </div>
+    </div>
+</body>
+
+</html>
+<script src="../script.js"></script>
+<script src="readme.js"></script>

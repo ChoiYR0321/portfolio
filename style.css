@@ -1,0 +1,1365 @@
+:root {
+    --bg-light: #faf7f2;
+    --bg-dark: #0a0a0a;
+    --text-light: #111;
+    --text-dark: #f5f5f5;
+    --accent: #ffb4d3;
+    --accent-2: #d8b4ff;
+    --radius: 20px;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--bg-light);
+    color: var(--text-light);
+    transition: 0.3s ease, color 0.3s ease;
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 10;
+}
+
+
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav a {
+    margin-left: 24px;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+}
+
+.toggle-btn {
+    padding: 10px 18px;
+    border-radius: 30px;
+    border: 1px solid currentColor;
+    cursor: pointer;
+    font-size: 14px;
+    background: transparent;
+    transition: 0.3s;
+}
+
+.hero {
+    padding: 120px 32px 80px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 72px;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+/* ================= Hero Project Icons ================= */
+
+.hero-projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-top: 80px;
+}
+
+/* 버튼 기본 리셋 */
+.hero-item {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    animation: float 4s ease-in-out infinite;
+    transition: transform 0.25s ease;
+}
+
+.hero-item img {
+    width: 130px;
+    filter: drop-shadow(0 16px 28px rgba(0, 0, 0, 0.18));
+    transition: transform 0.3s ease;
+}
+
+.hero-item:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.hero-item:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.hero-item:nth-child(3) {
+    animation-delay: 1.2s;
+}
+
+.hero-item:nth-child(4) {
+    animation-delay: 1.8s;
+}
+
+/* Hover 효과 */
+.hero-item:hover img {
+    transform: translateY(-6px) scale(1.05);
+}
+
+.hero-item:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 6px;
+}
+
+
+/* Tooltip */
+.tooltip {
+    position: absolute;
+    bottom: -46px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #111;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 14px;
+    border-radius: 20px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease;
+}
+
+.hero-item:hover .tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(6px);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hero-icons {
+        width: 300px;
+        height: 300px;
+    }
+
+    .hero-icon {
+        width: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-projects {
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .hero-item img {
+        width: 90px;
+    }
+
+    .tooltip {
+        font-size: 13px;
+    }
+}
+
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-16px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.section {
+    padding: 80px 32px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section h2 {
+    font-size: 48px;
+    margin-bottom: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+.card {
+    padding: 32px;
+    border-radius: var(--radius);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+
+/*---------------------*/
+/*-----index.html------*/
+/*---------------------*/
+
+/*------About------*/
+
+.about-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 0;
+}
+
+
+.about-photo {
+    flex-shrink: 0;
+    width: 280px;
+    height: 350px;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.about-desc {
+    width: 100%;
+    max-width: 800px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.about-desc p {
+    font-weight: 550;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    word-break: keep-all;
+    display: block;
+}
+
+
+/* =========================
+   About Digital Business Card
+========================= */
+
+.about-card-wrap {
+    display: flex;
+    justify-content: center;
+    perspective: 1200px;
+}
+
+.about-card {
+    width: 700px;
+    height: 350px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.about-card-wrap:hover .about-card {
+    transform: rotateY(180deg);
+}
+
+.about-card-face {
+    position: absolute;
+    inset: 0;
+    border-radius: 28px;
+    backface-visibility: hidden;
+    padding: 36px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
+}
+
+/* 앞면 */
+.about-card-face.front {
+    background: linear-gradient(135deg,
+            #fcd0e2,
+            #e4d1f8);
+}
+
+.card-photo {
+    width: 220px;
+    height: 260px;
+    border-radius: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.card-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-main {
+    color: #111;
+}
+
+.card-name {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.card-history {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.card-role {
+    font-size: 15px;
+    font-weight: 500;
+    opacity: 0.85;
+    margin-top: 2px;
+    margin-bottom: 20px;
+}
+
+.card-meta {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.card-meta span {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* 뒷면 */
+.about-card-face.back {
+    background: linear-gradient(135deg,
+            #685967,
+            #353039);
+    color: #fff;
+    transform: rotateY(180deg);
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-info {
+   display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 23px 25px;   
+    max-width: 580px; 
+    margin: 0 auto;
+}
+
+.card-info li {
+    list-style: none;
+}
+
+.card-info .tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 94px;             
+    padding: 0 14px;
+    border-radius: 16px;
+    font-size: 20px;           
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(216, 180, 255, 0.35);
+    backdrop-filter: blur(6px);
+    line-height: 1.2;
+}
+
+
+/* =========================
+   Mobile 대응 (Flip 제거)
+========================= */
+@media (max-width: 768px) {
+    .about-card {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        min-height: 320px;
+    }
+
+    .about-card-face {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .card-meta {
+        justify-content: center;
+    }
+}
+
+
+/* ================= About Mobile ================= */
+
+@media (max-width: 768px) {
+    .about-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-photo {
+        width: 220px;
+        height: 280px;
+    }
+
+    .about-info {
+        align-items: center;
+    }
+}
+
+
+
+/*------skills------*/
+
+.skill-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.skill-tab {
+    padding: 10px 24px;
+    background: var(--bg-light);
+    border-radius: 40px;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.skill-tab:hover,
+.skill-tab.active {
+    background: #f0e9df;
+    color: #111;
+}
+
+/* 탭 콘텐츠 활성화 제어 */
+.skill-content {
+    display: none;
+    animation: fadeEffect 0.5s ease;
+}
+
+.skill-content.active {
+    display: block;
+}
+
+/* [공통] 카드 정렬 베이스 */
+.skill-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin: 30px auto 0;
+}
+
+/* [중요] 모든 카드의 크기를 230px로 완전 고정 */
+.skill-card {
+    flex: 0 0 230px;
+    min-height: 160px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    box-sizing: border-box;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent);
+}
+
+/* ---------------------------------------------------
+   탭별 줄바꿈 제어 (부모 너비 제한)
+--------------------------------------------------- */
+
+/* 1. Front-End: 5개 (위 2 / 아래 3 배치 유도) */
+#tab-front .skill-flex {
+    max-width: 750px;
+    /* 카드 3개 너비 정도의 공간으로 제한하여 2/3 분할 */
+}
+
+/* 2. Back-End: 3개 (한 줄 배치) */
+#tab-back .skill-flex {
+    max-width: 1000px;
+    /* 공간을 넉넉히 주어 한 줄로 나열 */
+}
+
+/* 3. Tools: 4개 (한 줄 배치) */
+#tab-tools .skill-flex {
+    max-width: 1100px;
+    /* 카드 4개가 들어갈 수 있도록 확장 */
+}
+
+/* 아이콘 박스 및 개별 색상 */
+.icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    background: var(--bg-light);
+    color: #333;
+}
+
+.icon-box svg {
+    width: 32px;
+    height: 32px;
+}
+
+.html-icon {
+    background: #ffe59e;
+    color: #d97706;
+}
+
+.css-icon {
+    background: #ffb4d3;
+    color: #db2777;
+}
+
+.js-icon {
+    background: #d8b4ff;
+    color: #7c3aed;
+}
+
+.java-icon {
+    background: #bae6fd;
+    color: #0284c7;
+}
+
+.spring-icon {
+    background: #bbf7d0;
+    color: #16a34a;
+}
+
+.db-icon {
+    background: #fecaca;
+    color: #dc2626;
+}
+
+.git-icon {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+.ui-icon {
+    background: #a5f3fc;
+    color: #0891b2;
+}
+
+.skill-info h3 {
+    font-size: 18px;
+    margin: 0 0 6px 0;
+    font-weight: 700;
+}
+
+.skill-info p {
+    font-size: 14px;
+    margin: 0;
+    opacity: 0.6;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 모바일 대응: 화면이 좁아지면 자동으로 세로 정렬 */
+@media (max-width: 768px) {
+
+    #tab-front .skill-flex,
+    #tab-back .skill-flex,
+    #tab-tools .skill-flex {
+        max-width: 100%;
+    }
+}
+
+/*------project------*/
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 32px;
+}
+
+.project-card {
+    padding: 32px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #fff;
+    transition: 0.25s;
+}
+
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-header .tag {
+    background: #ffb4d3;
+    padding: 6px 14px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.project-header .tag.yellow {
+    background: #ffe59e;
+}
+
+.project-header .tag.green {
+    background: #c8ffb4;
+}
+
+
+.project-header .tag.purple {
+    background: #d8b4ff;
+}
+
+.project-header h3 {
+    font-size: 24px;
+    margin: 8px 0;
+}
+
+.period {
+    opacity: 0.7;
+}
+
+.description {
+    margin-top: 16px;
+}
+
+.description li {
+    margin: 6px 0;
+}
+
+.stack-box {
+    background: #fff3c4;
+    padding: 15px 18px;
+    border-radius: 14px;
+    margin-top: 18px;
+    font-size: 15px;
+}
+
+
+.button-row {
+    margin-top: 18px;
+    display: flex;
+    gap: 12px;
+}
+
+.readme-btn,
+.show-btn {
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(252, 252, 252, 0.1);
+    background: transparent;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.readme-btn {
+    background: rgba(176, 176, 204, 0.15);
+
+}
+
+.readme-btn:hover {
+    background: rgba(145, 145, 233, 0.3);
+
+}
+
+/* Show 버튼 색상 */
+.show-btn {
+    background: rgba(176, 176, 204, 0.15);
+}
+
+.show-btn:hover {
+    background: rgba(145, 145, 233, 0.3);
+
+}
+
+
+
+/*------Modal------*/
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+    padding: 60px 0;
+    z-index: 1000;
+}
+
+.modal {
+    width: 80%;
+    max-width: 900px;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    margin-bottom: 110px;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    position: relative;
+}
+
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    color: inherit;
+}
+
+
+
+/*------Show Modal------*/
+.modal-show-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 0;
+    overflow-y: auto;
+    z-index: 1100;
+}
+
+.modal-show {
+    width: 95%;
+    max-width: 1400px;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    margin-bottom: 110px;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    position: relative;
+}
+
+
+.close-show {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    color: inherit;
+}
+
+/* modal img */
+
+.modal-show img,
+.modal-show video {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer {
+    padding: 40px;
+    text-align: center;
+    opacity: 0.7;
+    margin-top: 80px;
+}
+
+
+/*------Show Modal Slide------*/
+
+.slide-container {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    position: relative;
+}
+
+.slide-container .nav-btn {
+    background: none;
+    border: none;
+    font-size: 3em;
+    color: #333;
+    cursor: pointer;
+    padding: 0 10px;
+    z-index: 9999;
+    transition: color 0.2s;
+}
+
+
+.slide-container .slides {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    height: auto;
+}
+
+.slide-item {
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.slide-item.active {
+    opacity: 1;
+    position: static;
+}
+
+.image-area {
+    width: 65%;
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.arch-area {
+    width: 100%;
+}
+
+.description-area {
+    width: 35%;
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.description-area ul {
+    margin-top: -20px;
+}
+
+.description-area li {
+    font-size: 17px;
+}
+
+.image-area img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    margin-bottom: 0;
+}
+
+.description-area p {
+    margin-top: 0;
+    font-size: 1.25em;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+
+
+@media (max-width: 768px) {
+    .slide-item {
+        flex-direction: column;
+    }
+
+    .image-area,
+    .description-area {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* ===============================
+   Large Desktop (1440px 이상)
+================================ */
+@media (min-width: 1440px) {
+
+    .hero h1 {
+        font-size: 84px;
+    }
+
+    .section {
+        max-width: 1400px;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skill-flex {
+        max-width: 1100px;
+    }
+}
+
+
+/* ===============================
+  Laptop (1024px ~ 1439px)
+================================ */
+@media (max-width: 1439px) {
+
+    header {
+        padding: 20px 28px;
+    }
+
+    nav a {
+        margin-left: 20px;
+        font-size: 15px;
+    }
+
+    .hero h1 {
+        font-size: 64px;
+    }
+
+    .floating-img {
+        width: 260px;
+        height: 260px;
+    }
+
+
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== Archiving ===== */
+.archiving-grid, .contact-grid {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.archiving-card, .contact-card {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 32px 36px;
+    border-radius: 22px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.archiving-card:hover, .contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+}
+
+.archiving-icon , .contact-icon{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.archiving-icon.github {
+    background: #e5e7eb;
+    color: #111;
+}
+
+.archiving-icon svg {
+    width: 34px;
+    height: 34px;
+}
+
+.archiving-info h3 {
+    font-size: 22px;
+    margin: 0 0 6px;
+}
+
+.archiving-info p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.archiving-info span {
+    display: block;
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.arch-contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+/* 공통 타이틀 */
+.arch-title {
+    font-size: 26px;
+    margin-bottom: 24px;
+}
+
+/* Archiving */
+.arch-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 22px;
+    border-radius: 16px;
+    background: var(--bg-light);
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+}
+
+.arch-item:hover {
+    background: #f0e9df;
+}
+
+.arch-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #e5e7eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arch-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.arch-text .arch-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.arch-text span {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* Contact */
+.contact-box {
+    background: var(--bg-light);
+    border-radius: 16px;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.contact-label {
+    opacity: 0.6;
+}
+
+.contact-value {
+    font-weight: 600;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+
+.arch-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+    .section-title {
+        text-align: center;
+        font-size: 32px;
+    }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+    .arch-contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .arch-title {
+        text-align: center;
+    }
+}
+
+
+/* ===============================
+   Mobile (768px 이하)
+================================ */
+@media (max-width: 768px) {
+
+    /* Header */
+    header {
+        flex-direction: column;
+        gap: 14px;
+        padding: 18px 20px;
+    }
+
+    nav {
+        position: static;
+        transform: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 90px 20px 60px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .floating-img {
+        width: 220px;
+        height: 220px;
+    }
+
+    /* Section */
+    .section {
+        padding: 60px 20px;
+    }
+
+    .section h2 {
+        font-size: 34px;
+        text-align: center;
+    }
+
+
+    .about-photo {
+        height: 300px;
+        margin: 0 auto;
+        max-width: 280px;
+    }
+
+    .about-text {
+        align-items: center;
+        gap: 32px;
+    }
+
+    .about-value {
+        font-size: 16px;
+    }
+
+    .about-desc {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    /* Skills */
+    .skill-tabs {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .skill-tab {
+        font-size: 15px;
+        padding: 8px 18px;
+    }
+
+    .skill-card {
+        flex: 0 0 100%;
+        max-width: 320px;
+    }
+
+    #tab-tools .skill-flex {
+        display: grid;
+        grid-template-columns: repeat(2, 230px);
+        /* 2열로 고정 */
+        justify-content: center;
+        /* 중앙 정렬 */
+        gap: 24px;
+        max-width: 500px;
+        /* 2개 카드가 들어갈 정도의 너비로 제한 */
+        margin: 30px auto 0;
+    }
+
+    /* 모바일 환경에서는 다시 1열로 보이게 설정 */
+    @media (max-width: 768px) {
+        #tab-tools .skill-flex {
+            grid-template-columns: 1fr;
+            max-width: 320px;
+        }
+    }
+
+
+    /* Projects */
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 24px;
+    }
+
+    .project-header h3 {
+        font-size: 20px;
+    }
+
+    .description li {
+        font-size: 14px;
+    }
+
+    .stack-box {
+        font-size: 14px;
+    }
+
+    /* Modal */
+    .modal,
+    .modal-show {
+        width: 92%;
+        padding: 24px;
+    }
+
+    /* Slide */
+    .slide-item {
+        flex-direction: column;
+    }
+
+    .image-area,
+    .description-area {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .description-area li {
+        font-size: 15px;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 13px;
+        padding: 30px 20px;
+    }
+}

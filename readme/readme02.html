@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 02</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="readme.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="readme-page">
+        <h2>음악 플레이 리스트</h2>
+        <p>2025.08.08 ~ 08.27 (개인 프로젝트)</p>
+        <hr>
+
+        <h3>📌 요약</h3>
+        <ul>
+            <li>Java Swing 기반의 음악 플레이어</li>
+            <li>파일 등록 · 검색 · 삭제 · 재생 기능 구현</li>
+            <li>이전/다음곡 재생, 즐겨찾기 관리 기능 지원</li>
+            <li>javazoom JLayer 라이브러리를 활용한 MP3 재생</li>
+        </ul>
+
+        <h3>🧠 기술적 포인트</h3>
+        <ul>
+            <li>JTable + DefaultTableModel을 활용한 음악 데이터 시각화</li>
+            <li>검색 기능: 제목/아티스트/앨범 기준 실시간 필터링</li>
+            <li>즐겨찾기 모드: 전환 시 별도의 목록 표시 및 UI 동기화</li>
+            <li>JLayer Player를 사용한 MP3 재생 제어 (재생/정지/곡 변경)</li>
+        </ul>
+
+        <h3>🔍 고찰</h3>
+        <p>
+            이 프로젝트는 Java 기반 GUI 프로그래밍과 멀티스레드 구조를 직접 설계해보는 경험을 목표로 진행되었습니다.
+            음악 데이터의 등록, 검색, 즐겨찾기 상태 변경 등을 관리하기 위해 리스트 자료구조를 사용하고,
+            JTable에 표시되는 데이터와 내부 데이터의 동기화 구조를 구현하는 과정에서 MVC 패턴의 필요성을 체감했습니다.
+        </p>
+
+        <p>
+            특히 음악 재생 기능은 JLayer 라이브러리를 활용해 별도의 스레드에서 재생을 실행하도록 구성하여,
+            UI가 멈추는 문제를 해결했습니다. 또한 이전/다음 곡 재생을 위해 현재 인덱스를 추적하고,
+            즐겨찾기 모드와 일반 모드 전환 시에도 데이터 구조가 일관되게 동작하도록 설계하는 과정에서
+            프로그램의 상태 관리를 깊게 이해할 수 있었습니다.
+        </p>
+
+        <p>
+            전체 UI는 Swing 컴포넌트만으로 구성하였고, 직접 버튼, 테이블, 입력 폼을 배치하며
+            사용자 경험(UX)을 고려한 기능 배치를 고민했습니다. 음악 플레이어라는 실제적인 기능을 구현하면서
+            파일 입출력, 스레드, 이벤트 기반 GUI 처리 등 Java의 핵심 기능을 종합적으로 다룰 수 있는 프로젝트였습니다.
+        </p>
+
+        <h3>🛠 기술 스택</h3>
+        <p>Java, Swing, JLayer (javazoom)</p>
+
+        <h3>⚙️ 실행 방법</h3>
+        <ul>
+            <li>프로젝트를 IntelliJ로 실행</li>
+            <li>필요 라이브러리: JLayer (jl1.0.1.jar)</li>
+            <li>PlayList.java 실행 시 GUI 프로그램 실행</li>
+            <li>음악 추가 버튼으로 MP3 파일 등록 후 재생 가능</li>
+        </ul>
+
+
+    </div>
+
+</body>
+ <script src="../script.js"></script>
+</html>
