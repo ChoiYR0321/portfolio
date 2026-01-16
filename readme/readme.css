@@ -38,3 +38,41 @@
       left: 0;
       top: 5px;
   }
+
+
+  @media (max-width: 768px) {
+    .readme-page {
+        padding: 32px 20px;
+    }
+
+    .readme-page h2 {
+        font-size: 26px;
+    }
+
+    .readme-page h3 {
+        font-size: 18px;
+    }
+
+    .readme-page li {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .readme-page {
+        padding: 28px 16px;
+    }
+
+    .readme-page h2 {
+        font-size: 22px;
+    }
+
+    .readme-page h3 {
+        font-size: 17px;
+    }
+
+    .readme-page p,
+    .readme-page li {
+        font-size: 14px;
+    }
+}

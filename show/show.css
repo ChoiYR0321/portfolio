@@ -36,7 +36,40 @@
     top: 5px;
 }
 
+@media (max-width: 768px) {
+    .slide-item {
+        flex-direction: column;
+        text-align: center;
+    }
 
+    .description-area {
+        max-width: 100%;
+    }
+
+    .show-page h2 {
+        font-size: 26px;
+    }
+}
+
+/* 모바일 */
+@media (max-width: 480px) {
+    .show-page {
+        padding: 28px 16px;
+    }
+
+    .show-page h2 {
+        font-size: 22px;
+    }
+
+    .description-area p {
+        font-size: 14px;
+    }
+
+    .nav-btn {
+        font-size: 18px;
+        padding: 6px 10px;
+    }
+}
 
 
 
