@@ -87,7 +87,7 @@ nav a {
     margin-top: 80px;
 }
 
-/* 버튼 기본 리셋 */
+
 .hero-item {
     position: relative;
     background: none;
@@ -119,7 +119,7 @@ nav a {
     animation-delay: 1.8s;
 }
 
-/* Hover 효과 */
+
 .hero-item:hover img {
     transform: translateY(-6px) scale(1.05);
 }
@@ -129,8 +129,6 @@ nav a {
     outline-offset: 6px;
 }
 
-
-/* Tooltip */
 .tooltip {
     position: absolute;
     bottom: -46px;
@@ -158,7 +156,7 @@ nav a {
     }
 
     50% {
-        transform: translateY(-6px);
+        transform: translateY(-16px);
     }
 
     100% {
@@ -193,21 +191,6 @@ nav a {
     }
 }
 
-
-
-@keyframes float {
-    0% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(-16px);
-    }
-
-    100% {
-        transform: translateY(0px);
-    }
-}
 
 .section {
     padding: 80px 32px;
@@ -1100,7 +1083,7 @@ footer {
     gap: 32px;
 }
 
-/* 공통 타이틀 */
+
 .arch-title {
     font-size: 26px;
     margin-bottom: 24px;
@@ -1296,16 +1279,16 @@ footer {
     #tab-tools .skill-flex {
         display: grid;
         grid-template-columns: repeat(2, 230px);
-        /* 2열로 고정 */
+        
         justify-content: center;
-        /* 중앙 정렬 */
+        
         gap: 24px;
         max-width: 500px;
-        /* 2개 카드가 들어갈 정도의 너비로 제한 */
+       
         margin: 30px auto 0;
     }
 
-    /* 모바일 환경에서는 다시 1열로 보이게 설정 */
+    
     @media (max-width: 768px) {
         #tab-tools .skill-flex {
             grid-template-columns: 1fr;
