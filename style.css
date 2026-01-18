@@ -847,19 +847,6 @@ footer {
     }
 
     
-    .about-card {
-        width: 100%;
-        max-width: 420px;
-        height: auto;
-        transform: none !important;
-    }
-
-    .about-card-face {
-        position: relative;
-        transform: none !important;
-        backface-visibility: visible;
-        box-shadow: none;
-    }
 
     .about-card-face.front {
         border-radius: 24px 24px 0 0;
@@ -870,8 +857,13 @@ footer {
         margin-top: -12px;
     }
 
-    .about-card-wrap:hover .about-card {
-        transform: none;
+    .about-card {
+        transform-style: preserve-3d;
+        transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+    }
+
+    .about-card.is-flipped {
+        transform: rotateY(180deg);
     }
 
     .card-photo {

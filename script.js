@@ -12,6 +12,23 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // About 카드 모바일 스크롤 flip
+    const aboutCard = document.querySelector('.about-card');
+
+    if (window.innerWidth <= 768 && aboutCard) {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    aboutCard.classList.add('is-flipped');
+                }
+            },
+            {
+                threshold: 0.6, // 카드 60% 보이면 뒤집힘
+            }
+        );
+
+        observer.observe(aboutCard);
+    }
 
 
     /* ----------------------------------------
