@@ -1,58 +1,131 @@
-/* ========== 기본 텍스트 스타일 ========== */
-.show-page h3 {
-    font-size: 20px;
-    margin-top: 25px;
+
+/* 기본 레이아웃 */
+.show-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 32px;
+    font-family: 'Space Grotesk', sans-serif;
+    color: #111;
+}
+
+/* ---------- 제목 ---------- */
+.show-page h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.show-page > p {
+    font-size: 14px;
+    opacity: 0.7;
+    margin-bottom: 16px;
+}
+
+/* ---------- 구분선 ---------- */
+.show-page hr {
+    margin: 18px 0 28px;
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+/* ---------- 슬라이드 컨테이너 ---------- */
+.slide-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ---------- 네비게이션 버튼 ---------- */
+.nav-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 8px 12px;
+    line-height: 1;
+}
+
+.nav-btn:hover {
+    opacity: 0.6;
+}
+
+/* ---------- 슬라이드 영역 ---------- */
+.slides {
+    flex: 1;
+    overflow: hidden;
+}
+
+.slide-item {
+    display: none;
+    align-items: center;
+    gap: 40px;
+}
+
+.slide-item.active {
+    display: flex;
+}
+
+/* ---------- 이미지 / 비디오 ---------- */
+.image-area {
+    flex: 1;
+}
+
+.image-area img,
+.image-area video {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 16px;
+    display: block;
+}
+
+/* ---------- 설명 영역 ---------- */
+.description-area {
+    flex: 1;
+    max-width: 420px;
+}
+
+.description-area p {
+    font-size: 16px;
+    line-height: 1.7;
     margin-bottom: 10px;
 }
 
-.show-page hr {
-    margin: 15px 0 20px;
-    border: none;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-
-
-.show-page ul {
-    list-style-type: none;
-    padding-left: 0;
-    margin-top: 10px;
-}
-
-.show-page li {
-    margin-bottom: 8px;
-    padding-left: 20px;
-    position: relative;
-}
-
-/* 리스트 아이콘 커스텀 */
-.show-page li::before {
-    content: "•";
-    font-weight: 700;
-    font-size: 1.5em;
-    line-height: 0.5;
-    position: absolute;
-    left: 0;
-    top: 5px;
-}
-
+/* ===============================
+   Tablet & Mobile (768px 이하)
+   =============================== */
 @media (max-width: 768px) {
-    .slide-item {
+
+    .show-page {
+        padding: 36px 20px;
+    }
+
+    .show-page h2 {
+        font-size: 26px;
+    }
+
+    .slide-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .slide-item.active {
         flex-direction: column;
         text-align: center;
+        gap: 20px;
     }
 
     .description-area {
         max-width: 100%;
     }
 
-    .show-page h2 {
-        font-size: 26px;
+    .nav-btn {
+        font-size: 22px;
     }
 }
 
-/* 모바일 */
 @media (max-width: 480px) {
+
     .show-page {
         padding: 28px 16px;
     }
@@ -70,7 +143,3 @@
         padding: 6px 10px;
     }
 }
-
-
-
-
