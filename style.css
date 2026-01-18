@@ -240,10 +240,10 @@ footer {
 }
 
 .card-info {
-   display: grid;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 23px 25px;   
-    max-width: 580px; 
+    gap: 23px 25px;
+    max-width: 580px;
     margin: 0 auto;
 }
 
@@ -256,10 +256,10 @@ footer {
     align-items: center;
     justify-content: center;
     width: 200px;
-    height: 94px;             
+    height: 94px;
     padding: 0 14px;
     border-radius: 16px;
-    font-size: 20px;           
+    font-size: 20px;
     font-weight: 600;
     text-align: center;
     color: #fff;
@@ -577,6 +577,230 @@ footer {
 
 }
 
+
+/*------Modal------*/
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+    padding: 60px 0;
+    z-index: 1000;
+}
+
+.modal {
+    width: 80%;
+    max-width: 900px;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    margin-bottom: 110px;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    color: inherit;
+}
+
+/*------Show Modal------*/
+.modal-show-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 0;
+    overflow-y: auto;
+    z-index: 1100;
+}
+
+.modal-show {
+    width: 95%;
+    max-width: 1400px;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    margin-bottom: 110px;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.close-show {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    color: inherit;
+}
+
+/* modal img */
+.modal-show img,
+.modal-show video {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer {
+    padding: 40px;
+    text-align: center;
+    opacity: 0.7;
+    margin-top: 80px;
+}
+
+/*------Show Modal Slide------*/
+.slide-container {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    position: relative;
+}
+
+.slide-container .nav-btn {
+    background: none;
+    border: none;
+    font-size: 3em;
+    color: #333;
+    cursor: pointer;
+    padding: 0 10px;
+    z-index: 9999;
+    transition: color 0.2s;
+}
+
+.slide-container .slides {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    height: auto;
+}
+
+.slide-item {
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slide-item.active {
+    opacity: 1;
+    position: static;
+}
+
+.image-area {
+    width: 65%;
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.arch-area {
+    width: 100%;
+}
+
+.description-area {
+    width: 35%;
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.description-area ul {
+    margin-top: -20px;
+}
+
+.description-area li {
+    font-size: 17px;
+}
+
+.image-area img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    margin-bottom: 0;
+}
+
+.description-area p {
+    margin-top: 0;
+    font-size: 1.25em;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .slide-item {
+        flex-direction: column;
+    }
+
+    .image-area,
+    .description-area {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* =============================== Large Desktop (1440px 이상) ================================ */
+@media (min-width: 1440px) {
+    .hero h1 {
+        font-size: 84px;
+    }
+
+    .section {
+        max-width: 1400px;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skill-flex {
+        max-width: 1100px;
+    }
+}
+
 /* Large Desktop (1440px 이상) */
 @media (min-width: 1440px) {
     .hero h1 {
@@ -649,8 +873,6 @@ footer {
     .about-card-wrap:hover .about-card {
         transform: none;
     }
-
-    /* 모바일 플립 제거 선택사항 */
 
     .skill-card {
         flex: 0 0 100%;
